@@ -339,8 +339,6 @@
         393s
         558s
         393s
-        558s
-        393s
         558s)
       object RectAnimation1: TRectAnimation
         Duration = 0.200000002980232200
@@ -554,7 +552,7 @@
             object rctConfirmaValor: TRectangle
               OnTap = btnSelecionarTipoFormaPagamentoTAP
               Align = Bottom
-              Fill.Color = xFFFFAD15
+              Fill.Color = claCornflowerblue
               Margins.Left = 20.000000000000000000
               Margins.Right = 20.000000000000000000
               Position.X = 20.000000000000000000
@@ -2404,7 +2402,7 @@
             object rctResultadoTransacaoComprovante: TRectangle
               OnTap = lblResultadoTransacaoComprovanteTap
               Align = Bottom
-              Fill.Color = xFFFFAD15
+              Fill.Color = claCornflowerblue
               Margins.Left = 20.000000000000000000
               Margins.Right = 20.000000000000000000
               Position.X = 20.000000000000000000
@@ -2735,7 +2733,7 @@
           Size.Width = 353.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 80
+          TabOrder = 82
           object gpnComprovanteOpcoes: TGridPanelLayout
             Align = Client
             Size.Width = 353.000000000000000000
@@ -2769,7 +2767,7 @@
               end>
             object rctSMSComprovante: TRectangle
               Align = Bottom
-              Fill.Color = xFFFFAD15
+              Fill.Color = claCornflowerblue
               Margins.Left = 20.000000000000000000
               Margins.Right = 20.000000000000000000
               Position.X = 196.500000000000000000
@@ -2818,7 +2816,7 @@
             end
             object rctEmailComprovante: TRectangle
               Align = Bottom
-              Fill.Color = xFFFFAD15
+              Fill.Color = claCornflowerblue
               Margins.Left = 20.000000000000000000
               Margins.Right = 20.000000000000000000
               Position.X = 20.000000000000000000
@@ -3352,7 +3350,7 @@
           object rctBtnCancelamento: TRectangle
             OnTap = rctBtnCancelamentoTap
             Align = Bottom
-            Fill.Color = xFFFFAD15
+            Fill.Color = claCornflowerblue
             Margins.Left = 20.000000000000000000
             Margins.Right = 20.000000000000000000
             Position.X = 20.000000000000000000
@@ -3451,177 +3449,6 @@
               end
             end
             object lblBtnVoltarAOInicioCancelamento: TLabel
-              Align = Contents
-              StyledSettings = []
-              Margins.Top = 9.000000000000000000
-              Margins.Bottom = 9.000000000000000000
-              Size.Width = 353.000000000000000000
-              Size.Height = 32.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.Font.Family = 'Roboto'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.Font.StyleExt = {00070000000000000004000000}
-              TextSettings.FontColor = xFFFFAD15
-              TextSettings.HorzAlign = Center
-              Text = 'VOLTAR AO IN'#205'CIO'
-              TabOrder = 0
-            end
-          end
-        end
-      end
-      object tbiRerlatorioDiario: TTabItem
-        OnTap = VoltarAoInicioTap
-        CustomIcon = <
-          item
-          end>
-        IsSelected = False
-        Size.Width = 8.000000000000000000
-        Size.Height = 8.000000000000000000
-        Size.PlatformDefault = False
-        StyleLookup = ''
-        TabOrder = 0
-        Text = 'Relatorio Diario'
-        ExplicitSize.cx = 8.000000000000000000
-        ExplicitSize.cy = 8.000000000000000000
-        object lytRelatorioFechamento: TLayout
-          Align = Client
-          Margins.Left = 20.000000000000000000
-          Margins.Top = 5.000000000000000000
-          Margins.Right = 20.000000000000000000
-          Margins.Bottom = 10.000000000000000000
-          Size.Width = 353.000000000000000000
-          Size.Height = 419.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          object sgrRelatorioFechamento: TStringGrid
-            Align = Client
-            CanFocus = True
-            ClipChildren = True
-            Size.Width = 353.000000000000000000
-            Size.Height = 419.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 0
-            RowCount = 80
-            Options = [ColumnResize, ColLines, RowLines, Header]
-            Viewport.Width = 353.000000000000000000
-            Viewport.Height = 419.000000000000000000
-            object sgcHora: TStringColumn
-              Header = 'Hora'
-              ReadOnly = True
-              Size.Width = 60.000000000000000000
-            end
-            object sgcOperacao: TStringColumn
-              Header = 'Opera'#231#227'o'
-              ReadOnly = True
-              Size.Width = 70.000000000000000000
-            end
-            object sgcNSUAutorizacao: TStringColumn
-              Header = 'NSU/DOC'
-              Size.Width = 75.000000000000000000
-            end
-            object sgcStatus: TStringColumn
-              Header = 'ST'
-              Size.Width = 25.000000000000000000
-            end
-            object sgcForma: TStringColumn
-              Header = 'TP'
-              ReadOnly = True
-              Size.Width = 25.000000000000000000
-            end
-            object sgcParcelas: TStringColumn
-              Header = 'P'
-              Size.Width = 25.000000000000000000
-            end
-            object sgcValor: TStringColumn
-              Header = 'Valor'
-              ReadOnly = True
-              Size.Width = 80.000000000000000000
-            end
-            object sgcResposta: TStringColumn
-              Header = 'Resposta'
-              Visible = False
-            end
-          end
-        end
-        object lblRelatorioFechamento: TLabel
-          Align = Top
-          StyledSettings = []
-          Size.Width = 393.000000000000000000
-          Size.Height = 17.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 18.000000000000000000
-          TextSettings.Font.StyleExt = {00020000000000000004000000}
-          TextSettings.FontColor = xFF27276D
-          TextSettings.HorzAlign = Center
-          Text = 'Relat'#243'rio de Transa'#231#245'es'
-          TabOrder = 1
-        end
-        object Rectangle2: TRectangle
-          Align = Top
-          Fill.Color = claWhite
-          Margins.Left = 20.000000000000000000
-          Margins.Top = 16.000000000000000000
-          Margins.Right = 20.000000000000000000
-          Margins.Bottom = 16.000000000000000000
-          Position.X = 20.000000000000000000
-          Position.Y = 33.000000000000000000
-          Size.Width = 353.000000000000000000
-          Size.Height = 1.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Color = xFFF0F0F0
-        end
-        object lytbtnVoltarAoInicioRelatorio: TLayout
-          Align = Bottom
-          Margins.Bottom = 25.000000000000000000
-          Position.Y = 484.000000000000000000
-          Size.Width = 393.000000000000000000
-          Size.Height = 49.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          object rctbtnVoltarAoInicioRelatorio: TRectangle
-            OnTap = VoltarAoInicioTap
-            Align = Bottom
-            Fill.Color = claWhite
-            Margins.Left = 20.000000000000000000
-            Margins.Top = 25.000000000000000000
-            Margins.Right = 20.000000000000000000
-            Position.X = 20.000000000000000000
-            Position.Y = -1.000000000000000000
-            Size.Width = 353.000000000000000000
-            Size.Height = 50.000000000000000000
-            Size.PlatformDefault = False
-            Stroke.Color = xFFFFAD15
-            XRadius = 2.000000000000000000
-            YRadius = 2.000000000000000000
-            object FloatAnimation25: TFloatAnimation
-              Duration = 0.400000005960464500
-              Interpolation = Circular
-              PropertyName = 'Width'
-              StartValue = 200.000000000000000000
-              StopValue = 55.000000000000000000
-            end
-            object Arc13: TArc
-              Align = Center
-              Size.Width = 30.000000000000000000
-              Size.Height = 30.000000000000000000
-              Size.PlatformDefault = False
-              Stroke.Color = xFFCFCFCF
-              Stroke.Thickness = 3.000000000000000000
-              Stroke.Cap = Round
-              Stroke.Dash = Dash
-              Stroke.Join = Round
-              Visible = False
-              EndAngle = -360.000000000000000000
-              object FloatAnimation26: TFloatAnimation
-                Duration = 2.000000000000000000
-                Loop = True
-                PropertyName = 'RotationAngle'
-                StartValue = 0.000000000000000000
-                StopValue = 360.000000000000000000
-              end
-            end
-            object lblbtnVoltarAoInicioRelatorio: TLabel
               Align = Contents
               StyledSettings = []
               Margins.Top = 9.000000000000000000

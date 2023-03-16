@@ -275,7 +275,7 @@ Coordinates=1570,504,153,33
 Coordinates=240,70,206,51
 
 []
-Coordinates=112,618,78,33
+Coordinates=1852,188,104,33
 Visible=True
 
 [btnVoltar]
@@ -289,9 +289,6 @@ Coordinates=2041,1,202,33
 
 [mtblRelatorioFechamentonumero_parcelas]
 Coordinates=2041,56,226,33
-
-[Rectangle2]
-Coordinates=1285,445,69,33
 
 [mtblRelatorioFechamentodescricao_resposta]
 Coordinates=2041,111,238,33
@@ -308,9 +305,6 @@ Coordinates=2069,221,222,33
 [mtblRelatorioFechamentotipo]
 Coordinates=1852,133,160,33
 
-[tbiRerlatorioDiario]
-Coordinates=1852,188,104,33
-
 [mtblRelatorioFechamentohora]
 Coordinates=1852,243,163,33
 
@@ -318,14 +312,8 @@ Coordinates=1852,243,163,33
 Coordinates=150,50,141,33
 Visible=False
 
-[lytRelatorioFechamento]
-Coordinates=1852,298,131,33
-
 [mtblRelatorioFechamentovalor]
 Coordinates=1852,353,166,33
-
-[lblRelatorioFechamento]
-Coordinates=1852,1,131,51
 
 [mtblRelatorioFechamentocodigo_resposta]
 Coordinates=2080,386,223,33
@@ -357,14 +345,8 @@ Coordinates=945,572,156,33
 [Arc11]
 Coordinates=814,87,42,33
 
-[FloatAnimation25]
-Coordinates=1852,573,100,33
-
 [FloatAnimation21]
 Coordinates=1852,683,100,33
-
-[lblbtnVoltarAoInicioRelatorio]
-Coordinates=2092,441,156,51
 
 [arcFormaPagamentoDebito]
 Coordinates=2039,518,148,33
@@ -372,26 +354,14 @@ Coordinates=2039,518,148,33
 [rctbtnVoltaraoInicioComprovante]
 Coordinates=2039,661,178,33
 
-[lytbtnVoltarAoInicioRelatorio]
-Coordinates=2039,771,156,33
-
 [lblbtnVoltaraoInicioComprovante]
 Coordinates=204,77,176,51
 
 [lytbtnVoltaraoInicioComprovante]
 Coordinates=2374,1,176,33
 
-[rctbtnVoltarAoInicioRelatorio]
-Coordinates=2374,56,157,33
-
 [FloatAnimation22]
 Coordinates=1852,738,100,33
-
-[Arc13]
-Coordinates=1120,142,42,33
-
-[FloatAnimation26]
-Coordinates=2092,877,100,33
 
 [aniFormaPagamentoDebito]
 Coordinates=2374,166,148,33
@@ -629,22 +599,6 @@ Coordinates=651,970,88,33
 
 [rctNumero3]
 Coordinates=562,970,72,33
-
-[sgcValor]
-Coordinates=643,423,57,33
-
-[sgcHora]
-Coordinates=143,423,55,33
-
-[sgrRelatorioFechamento]
-Coordinates=423,967,135,51
-
-[sgcOperacao]
-Coordinates=1088,53,79,33
-Visible=True
-
-[sgcForma]
-Coordinates=1074,194,63,33
 
 [gpnTeclado]
 Coordinates=19,165,40,33

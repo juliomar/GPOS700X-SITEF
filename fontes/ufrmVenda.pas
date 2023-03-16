@@ -169,10 +169,6 @@ type
     lblBtnVoltarAOInicioCancelamento: TLabel;
     lytVoltar: TLayout;
     btnVoltar: TSpeedButton;
-    tbiRerlatorioDiario: TTabItem;
-    lytRelatorioFechamento: TLayout;
-    lblRelatorioFechamento: TLabel;
-    Rectangle2: TRectangle;
     mtblRelatorioFechamento: TFDMemTable;
     mtblRelatorioFechamentohora: TStringField;
     mtblRelatorioFechamentoid_operacao: TIntegerField;
@@ -194,12 +190,6 @@ type
     Arc11: TArc;
     FloatAnimation22: TFloatAnimation;
     lblbtnVoltaraoInicioComprovante: TLabel;
-    lytbtnVoltarAoInicioRelatorio: TLayout;
-    rctbtnVoltarAoInicioRelatorio: TRectangle;
-    FloatAnimation25: TFloatAnimation;
-    Arc13: TArc;
-    FloatAnimation26: TFloatAnimation;
-    lblbtnVoltarAoInicioRelatorio: TLabel;
     arcFormaPagamentoDebito: TArc;
     aniFormaPagamentoDebito: TFloatAnimation;
     arcFormaPagamentoCreditoAVista: TArc;
@@ -272,15 +262,6 @@ type
     rctBackSpace: TRectangle;
     ShadowEffect11: TShadowEffect;
     lblBackSpace: TLabel;
-    sgrRelatorioFechamento: TStringGrid;
-    sgcHora: TStringColumn;
-    sgcOperacao: TStringColumn;
-    sgcForma: TStringColumn;
-    sgcValor: TStringColumn;
-    sgcResposta: TStringColumn;
-    sgcStatus: TStringColumn;
-    sgcParcelas: TStringColumn;
-    sgcNSUAutorizacao: TStringColumn;
     procedure btnSelecionarTipoFormaPagamentoTAP(Sender: TObject; const Point: TPointF);
     procedure btnFormaPagamentoDebitoTAP(Sender: TObject; const Point: TPointF);
     procedure btnFormaPagamentoCreditoAvistaTAP(Sender: TObject; const Point: TPointF);
@@ -335,6 +316,11 @@ type
     procedure HabilitaDesabilitaLytVoltar(AHabilitar: boolean = true);
   end;
 
+const
+  FEnderecoSITEF = '0.0.0.0:4096';
+  FLojaSITEF = '000000';
+  FTerminalSITEF = 'NMO000';
+
 var
   frmVenda: TfrmVenda;
 
@@ -372,14 +358,14 @@ begin
   tthread.CreateAnonymousThread(
     procedure
     begin
-      lEnderecoSITEF := '45.237.81.1:4092';
-      TLog.I('Configurando sitef para ' + lEnderecoSITEF);
+
+      TLog.I('Configurando sitef para ' + FEnderecoSITEF);
 
       lDadosSubAdquirencia := EmptyStr;
       // lDadosSubAdquirencia := '[DadosSubAdquirencia='
       TLog.I('Dados da sub-adquirencia ' + lDadosSubAdquirencia);
 
-      sts := configuraIntSiTefInterativoEx(lEnderecoSITEF, '000000', 'NMO12345', lDadosSubAdquirencia);
+      sts := configuraIntSiTefInterativoEx(FEnderecoSITEF, FLojaSITEF, FTerminalSITEF, lDadosSubAdquirencia);
 
       TLog.I('Configurando sitef interativo: ' + sts.ToString());
 
@@ -870,12 +856,12 @@ begin
               fpCDB_DEBITO:
                 begin
                   TFuncoesComuns.StopButtonAnimation(rctConfirmaValor, lblConfirmaValor, arcConfirmaValor, aniConfirmaValor);
-                  ExecutaTransacao('NMO12345', '', '', '000000');
+                  ExecutaTransacao(FTerminalSITEF, '', '', FLojaSITEF);
                 end;
               fpCCR_CREDITO_A_VISTA:
                 begin
                   TFuncoesComuns.StopButtonAnimation(rctConfirmaValor, lblConfirmaValor, arcConfirmaValor, aniConfirmaValor);
-                  ExecutaTransacao('NMO12345', '', '', '00000');
+                  ExecutaTransacao(FTerminalSITEF, '', '', FLojaSITEF);
                 end;
             end;
           end
