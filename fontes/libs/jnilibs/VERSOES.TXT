@@ -1,0 +1,4 @@
+07/12/2022 
+CliSiTef:           clisitef-7.0.117.61.r5-Simulado-gpos700  
+Java Compatibility: 1.8  
+BC:                 ppcomp_release-1.29.12.210113 

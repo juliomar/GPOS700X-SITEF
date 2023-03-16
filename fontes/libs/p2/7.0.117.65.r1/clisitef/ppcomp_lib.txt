@@ -1,0 +1,372 @@
+=============================================================================
+              Biblioteca Compartilhada SUNMI - formato LIB ANDROID
+                            Informações de Versão
+=============================================================================
+
+Versão 0.99 - 31/JUL/2020
+-------------------------
+- Primeira versão liberada para testes/integração.
+OBS: Não contempla CTLS.
+
+Versão 1.00 - 28/AGO/2020
+-------------------------
+- Versão contemplando interface contactless.
+- Módulos:
+.PayLib: 	 v1.4.43
+.Compatível com: SunmiPayHardwareService_v3.3.91T06_P2X
+
+Versão 1.01 - 30/SET/2020
+-------------------------
+- Correções gerais em retornos e traduções de erros.
+- PIN OFFLINE deixa de verificar keymap.
+- Correção na alimentação da estrutura AidV2 e tags passadas em setTlv.
+- Correção na verificação da tag 9F27 para Contactless.
+- Correção na regra para pegar o label ou o pref. name.
+- Formatação do AppLabel retornado.
+- Correção para identificar quando 2 cartões são aproximados simultaneamente.
+- Incluído tratamento na captura da tag 5F24 (data de expiração).
+- Correção na formatação de parâmetros recebidos pela BC.
+- Alteração na forma de detecção dos cartões com contato, contactless e tarja magnética.
+- Implementado ELO ODCVM.
+- Correção / adição de tags passadas durante o processamento EMV.
+- Adicionado tratamento para pegar trilha1/trilha2 para cartões Amex magstripe mode.
+- Módulos:
+.PayLib: 	 v1.4.43
+.Compatível com: SunmiPayHardwareService_v3.3.91T13_P2X
+
+Versão 1.02 - 30/OUT/2020
+-------------------------
+- Correção do erro de queda da aplicação quando várias transações são realizadas em sequência.
+- Tratamento/exibição da mensagem enviada no comando PP_StarRemoveCard/PP_RemoveCard.
+- Correção/tratamento nos valores de limites informado.
+- Incluido tratamento para timeout durante a seleção de aplicação do cartão pelo menu.
+- Módulos:
+.PayLib: 	 v1.4.43
+.Compatível com: SunmiPayHardwareService_v3.3.91T13_P2X
+
+Versão 1.03 - 08/JAN/2021
+-------------------------
+- Alteração de minSdkVersion para 21.
+- Módulos:
+.PayLib:    v1.4.43
+.Compatível com: SunmiPayHardwareService_v3.3.91T13_P2X
+
+Versão 1.04 - 27/JAN/2021
+-------------------------
+- Torna a conexão aos serviços da SunMi blocante.
+- Mapeando mensagens.
+- Notifica quando PIN é iniciado e finalizado.
+  - TipoNotificacao.DSP_INICIA_PIN
+  - TipoNotificacao.DSP_ENCERRA_PIN
+- Módulos:
+.PayLib:    v1.4.48
+.Compatível com: SunmiPayHardwareService_v3.3.91T13_P2X
+
+Versão 1.05 - 19/FEV/2021
+-------------------------
+- Limpa propriedades que podem gerar conflito na tag application do AndroidManifest.xml
+
+Versão 1.06 - 12/MAR/2021
+-------------------------
+- Exclui recursos não utilizados;
+- Retorno das tags de dados sensiveis nos comandos "GED" e "GEN".
+
+Versão 1.07 - 19/ABR/2021
+-------------------------
+- Inicialização de HEMV/HCLSS unificada em uma unica função;
+- Ajuste no código das notificações em função das mensagens recebidas;
+- Alteração da notificação INICIA_PIN com o número de tentativas de PIN OFFLINE;
+- Ajuste na data de geração para a versão da BC
+- Correção de Abort para funções blocantes usando funções de Acesso via serial;
+- Incluído tratamento para PIN OFF bloqueado (na atual transação ou já bloqueado);
+- Torna beep de PIN configurável;
+- Atualização do SDK da SunMI.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.08 - 30/ABR/2021
+-------------------------
+- Ajustes no comando ABORT no controle de execução;
+- Tratamento de exceção de abertura de biblioteca nativa.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.09 - 10/MAI/2021
+-------------------------
+- Ajustes na leituras das trilhas - correção na leitura da trilha 3.
+- Ajustes na leitura de cartão com a otimização do tempo de leitura e retorno de falso positivo.
+- Correção Amex ExpressPay - ajuste no valor de cashback informado ao Kernel SUNMI.
+- Correção Amex ExpressPay - correção na trilha 2 retornada para magstripe.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.10 - 12/MAI/2021
+-------------------------
+- Ajustes na leitura do cartão com:
+.Melhora no tempo de identificação do cartão presente, e
+.Correção do retorno errado(para "falso positivo").
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.11 - 13/MAI/2021
+-------------------------
+- Correção da exibição/travamento da tela de captura de pin quando o cartão é retirado no fluxo.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.12 - 14/MAI/2021
+-------------------------
+- Ajustes na verificação do cartão durante a captura de senha.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.13 - 17/MAI/2021
+-------------------------
+- Ajustes na leitura/identificação de cartão.
+- Otimização no acesso à inicialização da PAYLIB.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.14 - 19/MAI/2021
+-------------------------
+- Gera exceção se tentar conectar aos serviços da PayLib de forma blocante a partir da mainthread;
+- Logs adicionados no fluxo de carga do serviço da PayLib.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.15 - 20/MAI/2021
+-------------------------
+- Correção da trilha 2 retornada para cartões Amex processados como magstripe.
+- Correção de exception na geração de log (setLevel).
+- Ajuste na leitura do cartão com contato para identificar cartão mudo e/ou erro de leitura.
+- Ajuste na captura de pin para tratar ocorrência de "BANK MODE".
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.16 - 21/MAI/2021
+-------------------------
+- Sincronia de threads na captura de pin.
+- Incluído tratamento para cartão retirado no FinishChip.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.17 - 27/MAI/2021
+-------------------------
+- Correção no tratamento do "bypass" na captura de senha.
+- Verificação/tratamento dos erros de disponibilidade do serviço na leitura de cartão.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.18 - 31/MAI/2021
+-------------------------
+- Ajuste no comando ABORT - situação com comandos anteriores ainda em processamento.
+- Módulos:
+.PayLib:         v1.4.50
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.19 - 08/JUN/2021
+-------------------------
+- Alteração no comando de leitura do cartão para melhorar a performance.
+- Ajuste no tratamento do resultado da transação no cartão após o processamento ONLINE (2ndGAC).
+- Alteração na chamada para habilitar/desabilitar beep durante a captura de PIN.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.20 - 10/JUN/2021
+-------------------------
+- Tratamento de possível operação de menu realizado em comando anterior executado.
+- Ajuste no sincronismo da inicialização e cancelamento de uma captura de pin (caso BANK MODE).
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.21 - 23/JUN/2021
+-------------------------
+- Ajustes no retorno do comando GOC(GoOnChip) - timeout na captura de senha.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.22 - 15/JUL/2021
+-------------------------
+- Incluído tratamento para verificação de presença de cartão.
+- Incluído tratamento na verificação de limites máximos para transações de contactless.
+- Inclusão de logs.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.23 - 22/JUL/2021
+-------------------------
+- Correção na formatação da mensagem utilizada na captura de PIN, quando a mensagem contem mais de
+  16 caracteres.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.24 - 28/JUL/2021
+-------------------------
+- Ajuste no tempo esperado no comando que liga o cartão com contato.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.25 - 13/AGO/2021
+-------------------------
+- Correção da mensagem utilizada na captura de pin de transações contactless.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.26 - 26/AGO/2021
+-------------------------
+- Ajuste no tratamento dos erros de leitura de cartão.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.27 - 03/SET/2021
+-------------------------
+- Correção do comando Close quando acessado por função.
+- Correção no comando GIX, no retorno de alguns campos (versões, posiçao de chave).
+- Ajuste na inicialização do service, quando já foi iniciado não blocante.
+- Incluído tratamento para retorno de tags de terminal que não são obtidas do Kernel.
+- Ajuste no retorno de erro de transação recusada.
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.28 - 28/SET/2021
+-------------------------
+- Ajuste no tratamento de erros na leitura de cartões com chip.
+- Ajuste no menu das aplicações do cartão.
+- Correção na exibição dos LEDs contactless.
+- Correção no comando GIX nas  informações retornadas (SO, chaves).
+- Módulos:
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.29 - 25/OUT/2021
+-------------------------
+- Correção na exibição dos LEDs contactless durante o processamento da transação.
+- Correção do retorno de ERRO INTERNO que ocorre para erros novos da biblioteca.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.30 - 09/FEV/2022
+-------------------------
+- Ajuste nas informações usadas para obter o resultado da transação.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.31 - 18/MAR/2022
+-------------------------
+- Ajustes no comando PP_Abort para melhorar a identificação/leitura dos cartões.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.32 - 06/ABR/2022
+-------------------------
+- Ajuste na função de display com tratamento para as mensagens de tamanho fixo(2x16).
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.33 - 13/ABR/2022
+-------------------------
+- Correção na utilização do DDOL default do terminal, quando DDOL ausente no cartão.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.34 - 27/ABR/2022
+-------------------------
+- Correção na passagem do valor de cashback para o Kernel nas transações CTLS.
+- Tratamento da carga da biblioteca nativa quando não é acionada no dispositivo correto.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.35 - 23/MAI/2022
+-------------------------
+- Correção no retorno da trilha1(formato) e trilha2(tamanho AE/CTLS)(quando acionado por função).
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.36 - 15/JUN/2022
+-------------------------
+- Ajuste/controle da passagem do valor de cashback para o Kernel nas transações CTLS.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.37 - 01/JUL/2022
+-------------------------
+- Ajuste no erro retornado para cartão contactless com aplicação invalidada.
+- Ajuste no tratamento dos erros reportados pelo Kernel(possível causa do erro 83).
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.38 - 25/JUL/2022
+-------------------------
+- Tratamento/ajustes dos erros retornados para contactless(casos de 81 e 83).
+- Inclusão de novos logs durante o processamento.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.39 - 26/AGO/2022
+-------------------------
+- Permite configuração da tecla LIMPA na captura de PIN:
+.Limpar tudo ou 1 digito por vez.
+- Ajuste da inicialização do teclado no SDK do terminal.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.40 - 13/SET/2022
+-------------------------
+- Incluído tratamento para transação de cancelamento CTLS Mastercard (no 1stGAC).
+- Correção na verificação do portador (EMVCTO), quando ocorre bypass na 1º tentativa.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.41 - 29/SET/2022
+-------------------------
+- Ajuste na confirmação do cartão selecionado(recomendação SUNMI para caso de erro 83).
+- Ajuste no armazenamento do terminal capabilities no Kernel nas transações contactless.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.42 - 14/OUT/2022
+-------------------------
+- Habilitado método WKPAN.
+- Reforça armazenamento das tags 5f36, 9F35 e 9F40 no Kernel nas transações contactless.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.43 - 11/NOV/2022
+-------------------------
+- Ajuste no retorno do erro quando cartão CTLS é aproximado/retirado rapidamente (GetCard).
+- Incluído tratamento da prioridade de seleção de AID para cartão com contato no comando GCX.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.44 - 19/DEZ/2022
+-------------------------
+- Incluído tratamento de possível exception causada no cancelamento de leitura dos dispositivos.
+- Correção da mensagem apresentada para reaproximar o cartão no processamento de Issuer Scripts.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X
+
+Versão 1.45 - 01/FEV/2023
+-------------------------
+- Adicionado valor default a tag 9F5A.
+.PayLib:         v1.4.55
+.Compatível com: SunmiPayHardwareService_v3.3.107_P2X

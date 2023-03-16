@@ -1,0 +1,66 @@
+********************************************************************************
+Biblioteca CliSiTef (Android-p2)
+Copyright (C) 2001-2019 Software Express Informática Ltda.
+
+Todos os direitos reservados. Este é um software proprietário de uso restrito.
+Consulte a Software Express para saber as condições de uso.
+********************************************************************************
+
+Conteúdo do pacote
+------------------
+
+  clisitef         Biblioteca CliSiTef Android
+    clisitef\doc   Documentação da interface Java (Javadoc)
+    clisitef\jni   Binários nativos (.so) de cada arquitetura
+    clisitef\libs  Classes Java (.jar)
+  VERSOES.TXT     Versão do pacote
+
+Inclusão no projeto
+-------------------
+
+Os arquivos .so e .jar/.aar estão separados nos diretórios acima de forma que
+o desenvolvedor da automação possa incluí-los em seu projeto Android da forma
+mais adequada à sua organização.
+
+Em linhas gerais, o conteúdo dos diretórios 'jni' deve ser copiado para o local
+de bibliotecas nativas do projeto. Da mesma forma, o conteúdo dos diretórios
+'libs' deve ser incluído no classpath do projeto do projeto
+
+Por exemplo, num projeto típico do Android Studio, o conteúdo dos diretórios
+'jni' deve ser copiado para o diretório app\src\main\jniLibs do projeto.
+Já os arquivos .jar/.aar devem ser incluídos nas "dependencies" do
+build.gradle do projeto.
+
+Bibliotecas extras da plataforma 'p2' (somente APOS)
+------------------------------------
+
+(Arquivos que NÃO fazem parte da CliSiTef.)
+
+A CliSiTef Android está disponível para diferentes plataformas:
+ * celulares/tablets Android (plataforma 'mobile') e
+ * terminais APOS (uma plataforma por fabricante).
+
+Cada plataforma utiliza um conjunto diferente de bibliotecas próprias
+(normalmente para acesso aos periféricos e ao pinpad interno). Essas
+bibliotecas são fornecidas pelo fabricante do terminal para o desenvolvedor da
+automação e devem ser incluídas na compilação da aplicação final.
+
+Esses arquivos NÃO são propriedade da Software Express. A responsabilidade de
+suporte e distribuição desses arquivos é do fabricante (Tectoy).
+
+Esta versão da CliSiTef foi compilada em conjunto com a biblioteca
+PPCompp2-v1.40 da Tectoy.
+
+Não recomendamos o uso de versões diferentes desse arquivo em conjunto com
+a CliSiTef contida neste pacote, uma vez que as diferenças entre as versões
+podem não ter sido homologadas.
+
+Informações adicionais
+----------------------
+
+A Software Express fornece um projeto Android Studio que demonstra o uso
+da CliSiTef (consulte-nos).
+
+Detalhes sobre o uso da CliSiTef Android se encontram no documento
+"CliSiTef - Interface com a aplicação - Android". Consulte a Software Express
+caso não tenha recebido este documento.

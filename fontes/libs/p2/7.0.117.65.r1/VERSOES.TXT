@@ -1,0 +1,4 @@
+23/01/2023 
+CliSiTef:           clisitef-7.0.117.65.r1-Simulado-p2  
+Java Compatibility: 1.8  
+BC:                 PPCompp2-v1.40 
